@@ -1,0 +1,29 @@
+<!-- INCLUDE overall_header.html -->
+
+<div class="panel" id="message"><div class="inner"><span class="corners-top"><span/></span>
+<div align="center"><h2>{PAGE_HEADING}</h2></div>
+
+<div align="center"><!--<h3>Personal {MANAGEMENT_ITEM}s ({MANAGEMENT_COUNT})</h3>//-->
+
+<div class="panel" style="width: 600px;"><div class="inner"><span class="corners-top"><span/></span><div class="itemContainer">
+
+<!-- BEGIN selectable -->
+<div class="item<!-- IF selectable.SELECTED --> item-selected<!-- ENDIF -->">
+<a href="{PAGE_NAME}.php?select={selectable.ID}"><img src="/minecraft/{UPLOAD_DIR}/{selectable.ID}.png" /></a>
+<!-- IF selectable.ID --><div class="delete"><a href="{PAGE_NAME}.php?delete={selectable.ID}"><img src="delete.png" /></a></div><!-- ENDIF -->
+</div>
+<!-- END selectable -->
+
+</div>
+
+<form action="{PAGE_NAME}.php" method="post" enctype="multipart/form-data">
+<label for="file"><h4>Upload {MANAGEMENT_ITEM}</h4></label>
+<input type="file" name="file" id="file" style="width: 400px;" /><input type="submit" name="submit" value="Upload" /></form>
+<span class="corners-bottom"><span/></span></div></div>
+
+</div>
+
+
+<span class="corners-bottom"><span/></span></div></div>
+
+<!-- INCLUDE overall_footer.html -->
